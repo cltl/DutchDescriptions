@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>Description inspector</title>
+<style>
+body {
+    background-color: #484043;
+    font-family: "Helvetica";
+    font-size: 12;
+    color: #192823;
+}
+h1 {color: black;}
+a {color: #1f618d ;}
+.clearfix {
+    background-color: #c0c0c0;
+    overflow: auto;
+    width: 1024px;
+    margin:auto;
+    border: 3px solid #FFFFFF;
+}
+
+#image {
+    width: 400px;
+    height: 291px;
+    border: 1px solid black;
+    float: left;
+    margin: 5px;
+    background-color: black;
+    background-image: url({{img}});
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#captions {
+    background-color: #CCCCCC;
+    width: 600px;
+    min-height: 300px;
+    border: 1px solid black;
+    margin: 5px;
+    float: left;
+}
+
+#buttons {
+    background-color: #CCCCCC;
+    width: 600px;
+    min-height: 100px;
+    margin: 5px;
+    border: 1px solid black;
+    float:right;
+}
+
+#allcontent {
+    background-color: #CCCCCC;
+    width: 600px;
+    min-height: 100px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+ul { margin: 5px 0px 5px 20px; padding: 0; }
+
+</style>
+</head>
+<body>
+    <div class="clearfix">
+    <center>
+    <h1><a href="/" style="color: black;">Inspecting image descriptions</a></h1>
+    <form action="/results/0" method="POST">Search for subset: <input type="text" name="query"><input type="submit"></form>
+    </center>
+    {% block all_content %}
+    <!--<div id="image"><img src="{{image}}" width="400px"></img></div>-->
+    <div id="image"> </div>
+    
+    <div id="captions">
+        <div id="text" style="margin-left:5px;">
+        <p style="margin-bottom:5px;margin-top:5px">
+        {% if index > 0%}<a href="/image/{{index - 1}}">Previous image</a> - {% endif %}
+        Image ID: {{key}}
+        {% if index < max_index %} - <a href="/image/{{index + 1}}">Next image</a>{% endif %}
+        </p>
+        <b>Dutch</b><br/>
+        <ul>
+           {% for item in dutch %}
+               <li>{{item}}</li>
+           {% endfor %}
+        </ul>
+        <b>English</b><br/>
+        <ul>
+           {% for item in english %}
+               <li>{{item}}</li>
+           {% endfor %}
+        </ul>
+        <b>German</b><br/>
+        <ul>
+           {% for item in german %}
+               <li>{{item}}</li>
+           {% endfor %}
+        </ul>
+        </div>
+    </div>
+    <!--
+    <div id="buttons">{% block buttons %}<p style="margin:5px;">This box is reserved for annotating the generated sentence.</p>{% endblock %}</div>
+    -->
+    </div>
+    {% endblock %}
+</body>
+</html>
