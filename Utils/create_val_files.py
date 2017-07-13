@@ -2,12 +2,12 @@ import csv
 from collections import defaultdict
 
 # Load file from the first crowdsourcing job.
-with open('./crowdflower1-annotated.csv') as f:
+with open('../Data/Dutch/Raw/crowdflower1-annotated-anonymized.csv') as f:
     reader = csv.DictReader(f)
     entries = list(reader)
 
 # Load file from the second crowdsourcing job.
-with open('./crowdflower2-annotated.csv') as f:
+with open('../Data/Dutch/Raw/crowdflower2-annotated-anonymized.csv') as f:
     reader = csv.DictReader(f)
     entries += list(reader)
 
@@ -15,7 +15,7 @@ with open('./crowdflower2-annotated.csv') as f:
 tainted = [e for e in entries if not e['sentence_category'] == 'OK']
 kept = [e for e in entries if e['sentence_category'] == 'OK']
 
-with open('./splits/val_images.txt') as f:
+with open('../Data/splits/val_images.txt') as f:
     keys = [line.split('.')[0] for line in f]
 
 key_set = set(keys)
@@ -32,5 +32,5 @@ sorted_descriptions = [val_descriptions[key] for key in keys]
 d1,d2,d3,d4,d5 = zip(*sorted_descriptions)
 
 for i, descriptions in enumerate([d1,d2,d3,d4,d5]):
-    with open('./dutch_val/val.' + str(i), 'w') as f:
+    with open('../Data/Dutch/Val/val.' + str(i), 'w') as f:
         f.writelines(descriptions)
