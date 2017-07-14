@@ -6,8 +6,6 @@ This repository is part of the following paper, which will be presented at
 ```
 @unpublished{miltenburg2017cross,
 	Author = {Emiel van Miltenburg and Desmond Elliott and Piek Vossen},
-	Date-Added = {2017-07-14 09:47:36 +0000},
-	Date-Modified = {2017-07-14 09:53:41 +0000},
 	Note = {Paper accepted at INLG 2017, \url{https://arxiv.org/abs/1707.01736}},
 	Title = {Cross-linguistic differences and similarities in image descriptions},
 	Year = {2017}}
