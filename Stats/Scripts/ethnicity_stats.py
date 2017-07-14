@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib_venn import venn3
 
 
-with open('./ethnicity.csv') as f:
+with open('../../Data/Annotations/ethnicity.csv') as f:
     reader = csv.DictReader(f)
     entries = list(reader)
 
@@ -43,4 +43,4 @@ x,y = label_11.get_position()
 #label_11.set_x(x-0.025)
 label_11.set_y(y-0.07)
 
-plt.savefig('ethnicity.pdf')
+plt.savefig('../Output/ethnicity.pdf')

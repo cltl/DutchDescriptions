@@ -25,11 +25,11 @@ def get_descriptions(filename):
         return [line.strip() for line in f]
 
 
-dutch_filenames = glob.glob('./dutch_val/val.*')
+dutch_filenames = glob.glob('../../Data/Dutch/Val/val*')
 dutch_descriptions = map(get_descriptions, dutch_filenames)
 
 
-with open('./splits/val_images.txt') as f:
+with open('../../Data/splits/val_images.txt') as f:
     images = [line.strip('.jpg\n') for line in f]
 
 header = ['flickr_id', 'description', 'negations']
@@ -43,7 +43,7 @@ for descriptions in dutch_descriptions:
             row = [flickr_id, description, ' '.join(intersection|neg_verbs)]
             rows.append(row)
 
-with open('dutch_negations.csv', 'w') as f:
+with open('../Output/dutch_negations.csv', 'w') as f:
     writer = csv.writer(f)
     writer.writerow(header)
     writer.writerows(rows)

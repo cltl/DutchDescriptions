@@ -28,11 +28,11 @@ def get_descriptions(filename):
         return [line.strip() for line in f]
 
 
-german_filenames = glob.glob('./Flask-website/static/mmt_task2/de/val/de_val.*')
+german_filenames = glob.glob('../../Data/German//Val/de_val*')
 german_descriptions = map(get_descriptions, german_filenames)
 
 
-with open('./splits/val_images.txt') as f:
+with open('../../Data/splits/val_images.txt') as f:
     images = [line.strip('.jpg\n') for line in f]
 
 header = ['flickr_id', 'description', 'negations']
@@ -46,7 +46,7 @@ for descriptions in german_descriptions:
             row = [flickr_id, description, ' '.join(intersection|neg_verbs)]
             rows.append(row)
 
-with open('german_negations.csv', 'w') as f:
+with open('../Output/german_negations.csv', 'w') as f:
     writer = csv.writer(f)
     writer.writerow(header)
     writer.writerows(rows)

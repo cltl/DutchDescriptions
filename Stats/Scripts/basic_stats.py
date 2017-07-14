@@ -6,9 +6,10 @@ from numpy import mean, std
 
 punctuation_set = set(punctuation)
 
-de_descriptions = glob.glob('./Flask-website/static/mmt_task2/de/val/de_val*')
-en_descriptions = glob.glob('./Flask-website/static/mmt_task2/en/val/val*')
-nl_descriptions = glob.glob('./dutch_val/val*')
+de_descriptions = glob.glob('../../Data/German/Val/de_val*')
+en_descriptions = glob.glob('../../Data/English/Val/val*')
+nl_descriptions = glob.glob('../../Data/Dutch/Val/val*')
+
 
 def get_lines(filename):
     "Get the lines from a file."
