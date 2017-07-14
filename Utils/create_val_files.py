@@ -1,3 +1,8 @@
+"""
+This script creates the Dutch validation files in the same format as the English
+and German descriptions.
+"""
+
 import csv
 from collections import defaultdict
 
