@@ -1,0 +1,30 @@
+----------------------
+Dutch
+----------------------
+een man 	 517
+een vrouw 	 252
+de man 	 105
+een jongen 	 92
+twee mannen 	 92
+----------------------
+
+----------------------
+English
+----------------------
+a man 	 760
+a woman 	 367
+a young 	 223
+a group 	 211
+two men 	 127
+----------------------
+
+----------------------
+German
+----------------------
+ein mann 	 584
+eine frau 	 296
+zwei männer 	 120
+ein junge 	 108
+der mann 	 93
+----------------------
+
