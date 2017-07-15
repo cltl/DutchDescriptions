@@ -4,6 +4,11 @@ This repository contains a Flask tool to inspect and compare image descriptions
 in Dutch, English, and German. Use `python compare_languages.py` to run the tool.
 Then go to `http://127.0.0.1:5001/` in your browser to use it.
 
+## Obtaining the images
+
+This repository does not contain the Flickr30K images. Fill in the form on [this page](http://shannon.cs.illinois.edu/DenotationGraph/)
+to obtain the images. Put the images from `flickr30k-images.tar` in `./static/images/`.
+
 ## Using the comparison tool
 
 Here's a screen shot of the comparison tool.
