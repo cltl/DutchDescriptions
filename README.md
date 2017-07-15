@@ -1,7 +1,10 @@
 # DutchDescriptions
 Dutch descriptions for the Flickr30K validation data, plus a cross-lingual comparison tool.
-This repository is part of the following paper, which will be presented at
-[INLG 2017](https://eventos.citius.usc.es/inlg2017/index):
+This repository is part of [this paper](https://arxiv.org/abs/1707.01736), which
+will be presented at [INLG 2017](https://eventos.citius.usc.es/inlg2017/index).
+
+Here is a temporary BibTeX entry, which will be updated when the paper has been
+included in the ACL anthology.
 
 ```
 @unpublished{miltenburg2017cross,
@@ -11,8 +14,6 @@ This repository is part of the following paper, which will be presented at
 	Year = {2017}}
 ```
 
-
-
 ## Folder structure
 
 * `Crowdsourcing` Contains the data used as *input* for the crowdsourcing task.
@@ -20,6 +21,17 @@ This repository is part of the following paper, which will be presented at
 * `InspectionTool` Contains code and data for the inspection tool.
 * `Stats` Contains scripts to generate statistics about the data, and the output of these scripts.
 * `Utils` Contains a script to anonymize the data, and a script to generate Dutch validation files.
+
+
+## Requirements
+
+We used Python 3.6.1 with the following external libraries:
+
+* Flask 0.1.2
+* NLTK 3.2.2
+* Numpy 1.12.0
+* Matplotlib 2.0.0
+* Matplotlib-venn 0.11.5
 
 ## Notes
 
