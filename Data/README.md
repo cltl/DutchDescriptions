@@ -10,6 +10,9 @@ Task 2: Crosslingual Image Description Generation.
 * In addition, the `English` folder contains annotations for non-affixal negation,
 from Van Miltenburg et al. (2016, [GitHub](https://github.com/evanmiltenburg/annotating-negations/)).
 
+* The `French` folder contains data from [WMT17](http://www.statmt.org/wmt17/multimodal-task.html).
+This data was not used for the INLG paper, but added afterwards.
+
 * The `Dutch` folder contains the (anonymized) Dutch crowdsourcing data along with
 validation and test files, in the same format as the English and German data.
 
